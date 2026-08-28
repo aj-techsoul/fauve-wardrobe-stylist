@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #09090b;
+  --bg-secondary: #18181b;
+  --card-bg: rgba(24, 24, 27, 0.7);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --accent-primary: #D4AF37;
+  --accent-secondary: #F3E5AB;
+  --accent-hover: #FBBF24;
+  --accent-glow: rgba(212, 175, 55, 0.15);
+  --text-primary: #f4f4f5;
+  --text-gold: #D4AF37;
+  --gradient-text: linear-gradient(135deg, #FFF 0%, #D4AF37 50%, #F3E5AB 100%);
+  --btn-bg: linear-gradient(to right, #f59e0b, #d97706);
+  --btn-text: #09090b;
+}
+
+[data-theme='pinkbeautiass'] {
+  --bg-primary: #000000;
+  --bg-secondary: #0d0508;
+  --card-bg: rgba(18, 7, 12, 0.85);
+  --card-border: rgba(255, 143, 171, 0.25);
+  --accent-primary: #FF8FAB;
+  --accent-secondary: #FFC2D1;
+  --accent-hover: #FFB3C6;
+  --accent-glow: rgba(255, 143, 171, 0.35);
+  --text-primary: #FFFFFF;
+  --text-gold: #FF8FAB;
+  --gradient-text: linear-gradient(135deg, #FFFFFF 0%, #FF8FAB 55%, #FFC2D1 100%);
+  --btn-bg: linear-gradient(to right, #FF8FAB, #FB6F92);
+  --btn-text: #000000;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Glassmorphism & Custom Aesthetics */
+.glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.gold-gradient-text, .theme-gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow, .theme-border-glow {
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Specific styling overrides for PinkBeautiass theme */
+[data-theme='pinkbeautiass'] .bg-zinc-950,
+[data-theme='pinkbeautiass'] .bg-black {
+  background-color: #000000 !important;
+}
+
+[data-theme='pinkbeautiass'] .bg-zinc-900 {
+  background-color: #0d0508 !important;
+}
+
+[data-theme='pinkbeautiass'] .bg-zinc-800 {
+  background-color: #1a0a10 !important;
+}
+
+[data-theme='pinkbeautiass'] .border-zinc-800,
+[data-theme='pinkbeautiass'] .border-zinc-700 {
+  border-color: rgba(255, 143, 171, 0.25) !important;
+}
+
+[data-theme='pinkbeautiass'] .border-amber-500\/40,
+[data-theme='pinkbeautiass'] .border-amber-500\/30,
+[data-theme='pinkbeautiass'] .border-amber-500 {
+  border-color: #FF8FAB !important;
+}
+
+[data-theme='pinkbeautiass'] .bg-amber-500,
+[data-theme='pinkbeautiass'] .bg-amber-400 {
+  background-color: #FF8FAB !important;
+  color: #000000 !important;
+}
+
+[data-theme='pinkbeautiass'] .text-amber-400,
+[data-theme='pinkbeautiass'] .text-amber-500,
+[data-theme='pinkbeautiass'] .text-amber-300 {
+  color: #FF8FAB !important;
+}
+
+[data-theme='pinkbeautiass'] .from-amber-500.to-amber-600,
+[data-theme='pinkbeautiass'] .from-amber-600.via-amber-400.to-amber-200 {
+  background-image: linear-gradient(135deg, #FF8FAB 0%, #FB6F92 50%, #FFE5EC 100%) !important;
+}
+
+[data-theme='pinkbeautiass'] .shadow-amber-500\/20,
+[data-theme='pinkbeautiass'] .shadow-amber-500\/10 {
+  box-shadow: 0 10px 25px -5px rgba(255, 143, 171, 0.4) !important;
+}
+
+[data-theme='pinkbeautiass'] ::selection {
+  background-color: #FF8FAB !important;
+  color: #000000 !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+

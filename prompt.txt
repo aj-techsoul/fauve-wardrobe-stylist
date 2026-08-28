@@ -1,0 +1,32 @@
+i want to make a app in (react, nextjs, tailwindcss) for db use sqlitedb, 
+
+purpose of the app: a app which let users upload (camera capture, later remove background) their clothes with sizes of that cloth and save it as their wardrobe (category). 
+
+then anybody wanted to use clothes from that wardrobe then they can send request to access the wardrobe. and the wardrobe owner will accept or reject or limit the access for certain hours or days.
+
+once the access is granted, the user can view matching/trending clothes including top,bottom,shoes (Gemini AI) from all the wardrobes she got including her own.
+
+and once she select the combinations, she can view the combination on her, how it looks on her. for which while creating wardrobe the user has to upload her photo. but make sure the photo which got uploaded cannot be opened by any other user than the user itself. (so pictures in server saved as dataurl format in file {{userid}}.np extenstion in folder named "usrnp").
+
+add login and register option including face/fingerprint login.
+
+the ui ux design should very modern and easy to use and very important aesthetic and minimilistic.  
+
+name of the project / app is "FAUVE"
+Created by Lovely Gloria and Sweet Vini.
+and supervised by "Handsome, Genius, PB  AJ"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
